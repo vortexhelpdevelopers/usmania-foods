@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Usmania Foods — Shah Latif Town, Karachi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0C0C0B; --panel:#1A1A17; --fg:#F5F1E8; --muted:#9C978A;
+    --gold:#E3A73C; --yellow:#F2C230; --line:#2B2A24;
+    box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+  html,body{height:100%;}
+  body{margin:0; background:var(--bg); color:var(--fg); font-family:'Work Sans',sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  h1,h2,.wordmark,.brand{font-family:'Oswald',sans-serif; letter-spacing:0.01em; text-transform:uppercase;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){ .reveal{transition:none; opacity:1; transform:none;} }
+
+  header{position:sticky; top:env(safe-area-inset-top,0px); z-index:30; background:rgba(12,12,11,0.93); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  nav{max-width:960px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between;}
+  .brand{font-size:18px; font-weight:600; color:var(--gold);}
+  .navlinks{display:flex; gap:22px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;}
+  .navlinks a{color:var(--muted); text-decoration:none;}
+  .navlinks a:hover{color:var(--fg);}
+  .btn-wa{display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#0C0C0B; text-decoration:none; padding:10px 16px; border-radius:2px; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; transition:transform .2s ease, filter .2s ease;}
+  .btn-wa:hover{filter:brightness(1.1); transform:translateY(-1px);}
+
+        <div class="loc-card"><h3>Address</h3><p>Sector 16-A, Shah Latif Town, Karachi</p></div>
+        <div class="loc-card"><h3>Order / WhatsApp</h3><p>0335-8226801</p></div>
+        <div class="loc-card"><h3>Delivery</h3><p>0318-2200056</p></div>
+      </div>
+      <div class="pin-graphic">
+        <div class="pin"></div>
+        <p>Live Google Maps embed slots in here on the final build.</p>
+        <a class="btn-outline" href="https://www.google.com/maps/search/?api=1&query=Usmania+Foods+Shah+Latif+Town+Karachi" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Usmania Foods</div>
+  <p>Sector 16-A, Shah Latif Town, Karachi</p>
+  <p><a href="https://wa.me/923358226801?text=Hi%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener">+92 335 8226801</a> · <a href="tel:+923182200056">+92 318 2200056</a></p>
+  <div class="demo-flag">Free demo — send your own food photography and this becomes your live site.</div>
+</footer>
+
+<script>
+  var els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:0.15});
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+</script>
+
+</body>
+  </html>
+  
