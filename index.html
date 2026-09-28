@@ -1,66 +1,1845 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Usmania Foods — Shah Latif Town, Karachi</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0C0C0B; --panel:#1A1A17; --fg:#F5F1E8; --muted:#9C978A;
-    --gold:#E3A73C; --yellow:#F2C230; --line:#2B2A24;
-    box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-  }
-  *{box-sizing:border-box;}
-  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
-  html,body{height:100%;}
-  body{margin:0; background:var(--bg); color:var(--fg); font-family:'Work Sans',sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
-  h1,h2,.wordmark,.brand{font-family:'Oswald',sans-serif; letter-spacing:0.01em; text-transform:uppercase;}
-  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
-  .reveal{opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s ease;}
-  .reveal.in{opacity:1; transform:translateY(0);}
-  @media (prefers-reduced-motion: reduce){ .reveal{transition:none; opacity:1; transform:none;} }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  header{position:sticky; top:env(safe-area-inset-top,0px); z-index:30; background:rgba(12,12,11,0.93); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
-  nav{max-width:960px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between;}
-  .brand{font-size:18px; font-weight:600; color:var(--gold);}
-  .navlinks{display:flex; gap:22px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;}
-  .navlinks a{color:var(--muted); text-decoration:none;}
-  .navlinks a:hover{color:var(--fg);}
-  .btn-wa{display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#0C0C0B; text-decoration:none; padding:10px 16px; border-radius:2px; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; transition:transform .2s ease, filter .2s ease;}
-  .btn-wa:hover{filter:brightness(1.1); transform:translateY(-1px);}
+  <title>Usmania Foods | Shah Latif Town, Karachi</title>
 
-        <div class="loc-card"><h3>Address</h3><p>Sector 16-A, Shah Latif Town, Karachi</p></div>
-        <div class="loc-card"><h3>Order / WhatsApp</h3><p>0335-8226801</p></div>
-        <div class="loc-card"><h3>Delivery</h3><p>0318-2200056</p></div>
-      </div>
-      <div class="pin-graphic">
-        <div class="pin"></div>
-        <p>Live Google Maps embed slots in here on the final build.</p>
-        <a class="btn-outline" href="https://www.google.com/maps/search/?api=1&query=Usmania+Foods+Shah+Latif+Town+Karachi" target="_blank" rel="noopener">Open in Maps</a>
-      </div>
+  <meta
+    name="description"
+    content="Usmania Foods — restaurant and food delivery in Sector 16-A, Shah Latif Town, Karachi."
+  >
+
+  <meta name="theme-color" content="#0b0b09">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* ================================
+       ROOT
+    ================================= */
+
+    :root {
+      --bg: #0b0b09;
+      --bg-soft: #11110e;
+      --panel: #181814;
+      --panel-light: #202018;
+
+      --text: #f5f1e8;
+      --muted: #a39d8c;
+
+      --gold: #e3a73c;
+      --gold-light: #f2c230;
+
+      --line: #2d2b24;
+
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Work Sans", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* ================================
+       TYPOGRAPHY
+    ================================= */
+
+    h1,
+    h2,
+    h3,
+    .brand {
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.015em;
+    }
+
+    /* ================================
+       HEADER
+    ================================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(11, 11, 9, 0.94);
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+    }
+
+    .brand {
+      color: var(--gold);
+      font-size: 22px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand-small {
+      display: block;
+
+      font-family: "Work Sans", sans-serif;
+      text-transform: uppercase;
+
+      color: var(--muted);
+
+      font-size: 8px;
+      letter-spacing: 0.24em;
+
+      margin-top: -3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-order {
+      background: var(--gold);
+      color: #11100d;
+
+      padding: 11px 17px;
+
+      text-decoration: none;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+
+      transition: 0.2s ease;
+    }
+
+    .nav-order:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    /* ================================
+       HERO
+    ================================= */
+
+    .hero {
+      min-height: 720px;
+
+      position: relative;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      border-bottom: 1px solid var(--line);
+
+      background:
+        radial-gradient(
+          circle at 75% 40%,
+          rgba(227, 167, 60, 0.15),
+          transparent 35%
+        ),
+        linear-gradient(
+          120deg,
+          #0b0b09 0%,
+          #10100d 55%,
+          #17140e 100%
+        );
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+
+      opacity: 0.4;
+
+      background-image:
+        radial-gradient(
+          rgba(227, 167, 60, 0.18) 1px,
+          transparent 1px
+        );
+
+      background-size: 28px 28px;
+
+      mask-image:
+        linear-gradient(
+          to right,
+          black,
+          transparent 75%
+        );
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+
+      width: min(var(--max), calc(100% - 40px));
+      margin: auto;
+
+      padding: 100px 0;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--gold);
+
+      font-size: 12px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 30px;
+      height: 2px;
+
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-size: clamp(58px, 10vw, 118px);
+
+      line-height: 0.88;
+
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-description {
+      max-width: 570px;
+
+      color: var(--muted);
+
+      font-size: 18px;
+
+      line-height: 1.7;
+
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+
+      padding: 0 21px;
+
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #0b0b09;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: var(--text);
+
+      background: rgba(255,255,255,0.02);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .hero-badge {
+      position: absolute;
+
+      right: 0;
+      bottom: 90px;
+
+      width: 260px;
+      height: 260px;
+
+      border: 1px solid rgba(227, 167, 60, 0.35);
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      color: var(--gold);
+
+      font-family: "Oswald", sans-serif;
+
+      font-size: 27px;
+
+      text-transform: uppercase;
+
+      transform: rotate(-9deg);
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(227, 167, 60, 0.09),
+          transparent 65%
+        );
+    }
+
+    .hero-badge small {
+      display: block;
+
+      color: var(--muted);
+
+      font-family: "Work Sans", sans-serif;
+
+      font-size: 10px;
+
+      letter-spacing: 0.15em;
+    }
+
+    /* ================================
+       INFO BAR
+    ================================= */
+
+    .info-bar {
+      border-bottom: 1px solid var(--line);
+
+      background: var(--panel);
+    }
+
+    .info-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-item {
+      padding: 25px;
+
+      border-right: 1px solid var(--line);
+    }
+
+    .info-item:last-child {
+      border-right: none;
+    }
+
+    .info-label {
+      color: var(--gold);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.13em;
+
+      margin-bottom: 5px;
+    }
+
+    .info-value {
+      color: var(--text);
+
+      font-size: 14px;
+
+      font-weight: 600;
+    }
+
+    /* ================================
+       SECTIONS
+    ================================= */
+
+    section {
+      padding: 100px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-kicker {
+      color: var(--gold);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.17em;
+
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(42px, 7vw, 76px);
+
+      line-height: 0.95;
+
+      margin-bottom: 45px;
+    }
+
+    /* ================================
+       ABOUT
+    ================================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1.15fr 0.85fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .about-copy {
+      color: var(--muted);
+
+      font-size: 17px;
+
+      line-height: 1.8;
+    }
+
+    .about-copy p + p {
+      margin-top: 20px;
+    }
+
+    .about-card {
+      padding: 38px;
+
+      background: var(--panel);
+
+      border: 1px solid var(--line);
+
+      position: relative;
+    }
+
+    .about-card::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 60px;
+      height: 3px;
+
+      background: var(--gold);
+    }
+
+    .about-card h3 {
+      font-size: 30px;
+
+      margin-bottom: 18px;
+    }
+
+    .about-card p {
+      color: var(--muted);
+    }
+
+    /* ================================
+       MENU
+    ================================= */
+
+    .menu-note {
+      max-width: 620px;
+
+      color: var(--muted);
+
+      margin-top: -25px;
+
+      margin-bottom: 40px;
+    }
+
+    .menu-list {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      column-gap: 60px;
+    }
+
+    .menu-item {
+      padding: 23px 0;
+
+      border-bottom: 1px solid var(--line);
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .menu-item-name {
+      font-size: 16px;
+
+      font-weight: 700;
+    }
+
+    .menu-item-description {
+      color: var(--muted);
+
+      font-size: 12px;
+
+      margin-top: 4px;
+    }
+
+    .menu-price {
+      color: var(--gold);
+
+      font-weight: 700;
+
+      white-space: nowrap;
+    }
+
+    .menu-cta {
+      margin-top: 35px;
+    }
+
+    /* ================================
+       WHY US
+    ================================= */
+
+    .feature-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 1px;
+
+      background: var(--line);
+
+      border: 1px solid var(--line);
+    }
+
+    .feature {
+      background: var(--panel);
+
+      padding: 35px;
+    }
+
+    .feature-number {
+      color: var(--gold);
+
+      font-family: "Oswald", sans-serif;
+
+      font-size: 42px;
+
+      margin-bottom: 22px;
+    }
+
+    .feature h3 {
+      font-size: 23px;
+
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    /* ================================
+       REVIEWS
+    ================================= */
+
+    .review-summary {
+      display: flex;
+
+      align-items: center;
+
+      gap: 30px;
+
+      padding: 40px;
+
+      background: var(--panel);
+
+      border: 1px solid var(--line);
+
+      margin-bottom: 30px;
+    }
+
+    .rating {
+      font-family: "Oswald", sans-serif;
+
+      font-size: 78px;
+
+      line-height: 1;
+
+      color: var(--text);
+    }
+
+    .stars {
+      color: var(--gold);
+
+      font-size: 22px;
+
+      letter-spacing: 3px;
+    }
+
+    .review-text {
+      color: var(--muted);
+
+      max-width: 650px;
+
+      font-size: 14px;
+    }
+
+    .review-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 16px;
+    }
+
+    .review {
+      background: var(--panel);
+
+      border: 1px solid var(--line);
+
+      padding: 28px;
+    }
+
+    .review-stars {
+      color: var(--gold);
+
+      margin-bottom: 15px;
+    }
+
+    .review p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    /* ================================
+       LOCATION
+    ================================= */
+
+    .location-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 45px;
+    }
+
+    .location-card {
+      border-top: 1px solid var(--line);
+
+      padding: 24px 0;
+    }
+
+    .location-card h3 {
+      color: var(--gold);
+
+      font-size: 13px;
+
+      margin-bottom: 7px;
+    }
+
+    .location-card p {
+      font-size: 17px;
+    }
+
+    .map-card {
+      min-height: 360px;
+
+      border: 1px solid var(--line);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(227, 167, 60, 0.10),
+          transparent
+        ),
+        repeating-linear-gradient(
+          45deg,
+          #12120f,
+          #12120f 10px,
+          #151510 10px,
+          #151510 20px
+        );
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      text-align: center;
+
+      padding: 35px;
+    }
+
+    .map-pin {
+      width: 42px;
+      height: 42px;
+
+      border-radius: 50% 50% 50% 0;
+
+      background: var(--gold);
+
+      transform: rotate(-45deg);
+
+      margin-bottom: 28px;
+
+      box-shadow: 0 0 40px rgba(227, 167, 60, 0.25);
+    }
+
+    .map-card h3 {
+      font-size: 28px;
+
+      margin-bottom: 8px;
+    }
+
+    .map-card p {
+      color: var(--muted);
+
+      margin-bottom: 24px;
+    }
+
+    /* ================================
+       CTA
+    ================================= */
+
+    .final-cta {
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(227, 167, 60, 0.11),
+          transparent 55%
+        );
+    }
+
+    .final-cta h2 {
+      font-size: clamp(48px, 8vw, 90px);
+
+      line-height: 0.9;
+
+      max-width: 850px;
+
+      margin: auto;
+    }
+
+    .final-cta h2 span {
+      color: var(--gold);
+    }
+
+    .final-cta p {
+      max-width: 570px;
+
+      color: var(--muted);
+
+      margin: 25px auto 30px;
+    }
+
+    /* ================================
+       FOOTER
+    ================================= */
+
+    footer {
+      padding: 60px 0 30px;
+
+      background: #080806;
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 1.3fr 1fr 1fr;
+
+      gap: 50px;
+
+      padding-bottom: 50px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .footer-brand {
+      color: var(--gold);
+
+      font-family: "Oswald", sans-serif;
+
+      font-size: 30px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 10px;
+    }
+
+    .footer-description {
+      color: var(--muted);
+
+      max-width: 330px;
+
+      font-size: 13px;
+    }
+
+    .footer-column h4 {
+      color: var(--text);
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+      margin-bottom: 15px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      text-decoration: none;
+
+      margin: 7px 0;
+    }
+
+    .footer-column a:hover {
+      color: var(--gold);
+    }
+
+    .copyright {
+      color: #625f55;
+
+      font-size: 11px;
+
+      padding-top: 25px;
+    }
+
+    /* ================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero-badge {
+        display: none;
+      }
+
+      .about-grid,
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-list {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container,
+      .hero-inner {
+        width: min(100% - 32px, var(--max));
+      }
+
+      .nav {
+        min-height: 64px;
+      }
+
+      .brand {
+        font-size: 19px;
+      }
+
+      .nav-order {
+        padding: 9px 12px;
+        font-size: 10px;
+      }
+
+      .hero {
+        min-height: 610px;
+      }
+
+      .hero-inner {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 62px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-item {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .info-item:last-child {
+        border-bottom: none;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .section-title {
+        margin-bottom: 32px;
+      }
+
+      .about-grid {
+        gap: 30px;
+      }
+
+      .about-card {
+        padding: 26px;
+      }
+
+      .feature {
+        padding: 28px;
+      }
+
+      .review-summary {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 28px;
+      }
+
+      .rating {
+        font-size: 62px;
+      }
+
+      .map-card {
+        min-height: 290px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================================
+       HEADER
+  ================================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#" style="text-decoration:none">
+
+        <div class="brand">
+          Usmania Foods
+        </div>
+
+        <span class="brand-small">
+          Shah Latif Town · Karachi
+        </span>
+
+      </a>
+
+      <nav class="nav-links">
+
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#location">Location</a>
+
+      </nav>
+
+      <a
+        class="nav-order"
+        href="https://wa.me/923182200056?text=Hi%2C%20I%27d%20like%20to%20order"
+        target="_blank"
+        rel="noopener"
+      >
+        Order Now
+      </a>
+
     </div>
-  </div>
-</section>
 
-<footer>
-  <div class="brand">Usmania Foods</div>
-  <p>Sector 16-A, Shah Latif Town, Karachi</p>
-  <p><a href="https://wa.me/923358226801?text=Hi%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener">+92 335 8226801</a> · <a href="tel:+923182200056">+92 318 2200056</a></p>
-  <div class="demo-flag">Free demo — send your own food photography and this becomes your live site.</div>
-</footer>
+  </header>
 
-<script>
-  var els = document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:0.15});
-    els.forEach(function(el){ io.observe(el); });
-  } else { els.forEach(function(el){ el.classList.add('in'); }); }
-</script>
+
+  <main>
+
+    <!-- ================================
+         HERO
+    ================================= -->
+
+    <section class="hero">
+
+      <div class="hero-pattern"></div>
+
+      <div class="hero-inner">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Shah Latif Town · Karachi
+          </div>
+
+          <h1>
+            Usmania<br>
+            <span>Foods</span>
+          </h1>
+
+          <p class="hero-description">
+            Delicious food, convenient ordering and a local dining
+            experience in Sector 16-A, Shah Latif Town, Karachi.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              class="btn-primary"
+              href="https://wa.me/923182200056?text=Hi%2C%20I%27d%20like%20to%20order"
+              target="_blank"
+              rel="noopener"
+            >
+              Order on WhatsApp
+            </a>
+
+            <a
+              class="btn-secondary"
+              href="#menu"
+            >
+              Explore Menu
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-badge">
+
+          <div>
+            USMANIA<br>
+            <small>FOODS · KARACHI</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         INFO BAR
+    ================================= -->
+
+    <div class="info-bar">
+
+      <div class="container info-grid">
+
+        <div class="info-item">
+
+          <div class="info-label">
+            Location
+          </div>
+
+          <div class="info-value">
+            Sector 16-A, Shah Latif Town
+          </div>
+
+        </div>
+
+        <div class="info-item">
+
+          <div class="info-label">
+            Order
+          </div>
+
+          <div class="info-value">
+            0318-2200056
+          </div>
+
+        </div>
+
+        <div class="info-item">
+
+          <div class="info-label">
+            WhatsApp
+          </div>
+
+          <div class="info-value">
+            0335-8226801
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================================
+         ABOUT
+    ================================= -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-kicker">
+          About Us
+        </div>
+
+        <h2 class="section-title">
+          Made for<br>
+          good moments.
+        </h2>
+
+        <div class="about-grid">
+
+          <div class="about-copy">
+
+            <p>
+              Usmania Foods is a local restaurant serving customers
+              in Shah Latif Town and surrounding areas of Karachi.
+            </p>
+
+            <p>
+              This website gives customers one simple place to
+              discover the restaurant, explore available food,
+              find the location and contact the team directly.
+            </p>
+
+            <p>
+              For the latest availability, deals and ordering
+              information, contact Usmania Foods directly.
+            </p>
+
+          </div>
+
+          <div class="about-card">
+
+            <h3>
+              Your local food stop.
+            </h3>
+
+            <p>
+              Located in Sector 16-A, Shah Latif Town, Karachi,
+              Usmania Foods is easily accessible for customers
+              in the surrounding area.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         MENU
+    ================================= -->
+
+    <section id="menu">
+
+      <div class="container">
+
+        <div class="section-kicker">
+          Our Menu
+        </div>
+
+        <h2 class="section-title">
+          Something<br>
+          for everyone.
+        </h2>
+
+        <p class="menu-note">
+          Menu items and prices can change. Contact us directly
+          on WhatsApp for today's complete menu, availability
+          and current prices.
+        </p>
+
+        <div class="menu-list">
+
+          <div class="menu-item">
+
+            <div>
+
+              <div class="menu-item-name">
+                Biryani
+              </div>
+
+              <div class="menu-item-description">
+                Ask us for today's available portions.
+              </div>
+
+            </div>
+
+            <div class="menu-price">
+              Ask
+            </div>
+
+          </div>
+
+
+          <div class="menu-item">
+
+            <div>
+
+              <div class="menu-item-name">
+                Pakistani Food
+              </div>
+
+              <div class="menu-item-description">
+                Traditional local favourites.
+              </div>
+
+            </div>
+
+            <div class="menu-price">
+              Ask
+            </div>
+
+          </div>
+
+
+          <div class="menu-item">
+
+            <div>
+
+              <div class="menu-item-name">
+                BBQ & Grills
+              </div>
+
+              <div class="menu-item-description">
+                Available items may vary.
+              </div>
+
+            </div>
+
+            <div class="menu-price">
+              Ask
+            </div>
+
+          </div>
+
+
+          <div class="menu-item">
+
+            <div>
+
+              <div class="menu-item-name">
+                Rice & Main Dishes
+              </div>
+
+              <div class="menu-item-description">
+                Contact us for current options.
+              </div>
+
+            </div>
+
+            <div class="menu-price">
+              Ask
+            </div>
+
+          </div>
+
+
+          <div class="menu-item">
+
+            <div>
+
+              <div class="menu-item-name">
+                Family Meals
+              </div>
+
+              <div class="menu-item-description">
+                Ask about available family options.
+              </div>
+
+            </div>
+
+            <div class="menu-price">
+              Ask
+            </div>
+
+          </div>
+
+
+          <div class="menu-item">
+
+            <div>
+
+              <div class="menu-item-name">
+                Drinks
+              </div>
+
+              <div class="menu-item-description">
+                Cold drinks and refreshments.
+              </div>
+
+            </div>
+
+            <div class="menu-price">
+              Ask
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="menu-cta">
+
+          <a
+            class="btn-primary"
+            href="https://wa.me/923182200056?text=Hi%2C%20please%20send%20me%20the%20current%20menu"
+            target="_blank"
+            rel="noopener"
+          >
+            Get Complete Menu on WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         FEATURES
+    ================================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-kicker">
+          Why Usmania
+        </div>
+
+        <h2 class="section-title">
+          Local food.<br>
+          Easy ordering.
+        </h2>
+
+        <div class="feature-grid">
+
+          <div class="feature">
+
+            <div class="feature-number">
+              01
+            </div>
+
+            <h3>
+              Local
+            </h3>
+
+            <p>
+              Conveniently located in Sector 16-A,
+              Shah Latif Town, Karachi.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-number">
+              02
+            </div>
+
+            <h3>
+              Direct
+            </h3>
+
+            <p>
+              Contact the restaurant directly through
+              WhatsApp or phone for your order.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-number">
+              03
+            </div>
+
+            <h3>
+              Convenient
+            </h3>
+
+            <p>
+              Find the location, explore available food
+              and get in touch from one place.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         REVIEWS
+    ================================= -->
+
+    <section id="reviews">
+
+      <div class="container">
+
+        <div class="section-kicker">
+          Customer Experience
+        </div>
+
+        <h2 class="section-title">
+          What people<br>
+          are saying.
+        </h2>
+
+        <div class="review-summary">
+
+          <div class="rating">
+            4.2
+          </div>
+
+          <div>
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p class="review-text">
+              Based on more than 300 public reviews.
+              Display the restaurant's latest verified reviews
+              here when the final website is connected to its
+              official review source.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="review-grid">
+
+          <div class="review">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <p>
+              A customer review section can be connected to
+              verified public reviews in the final build.
+            </p>
+
+          </div>
+
+
+          <div class="review">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <p>
+              Real customer feedback can be displayed here
+              once the restaurant approves the content.
+            </p>
+
+          </div>
+
+
+          <div class="review">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <p>
+              This section is ready for authentic reviews
+              and customer experiences.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         LOCATION
+    ================================= -->
+
+    <section id="location">
+
+      <div class="container">
+
+        <div class="section-kicker">
+          Visit Us
+        </div>
+
+        <h2 class="section-title">
+          Find<br>
+          Usmania Foods.
+        </h2>
+
+        <div class="location-grid">
+
+          <div>
+
+            <div class="location-card">
+
+              <h3>
+                Address
+              </h3>
+
+              <p>
+                Sector 16-A,<br>
+                Shah Latif Town,<br>
+                Karachi, Pakistan
+              </p>
+
+            </div>
+
+
+            <div class="location-card">
+
+              <h3>
+                WhatsApp / Order
+              </h3>
+
+              <p>
+                0335-8226801
+              </p>
+
+            </div>
+
+
+            <div class="location-card">
+
+              <h3>
+                Delivery
+              </h3>
+
+              <p>
+                0318-2200056
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="map-card">
+
+            <div class="map-pin"></div>
+
+            <h3>
+              Shah Latif Town
+            </h3>
+
+            <p>
+              Sector 16-A · Karachi
+            </p>
+
+            <a
+              class="btn-primary"
+              href="https://www.google.com/maps/search/?api=1&query=Usmania+Foods+Sector+16-A+Shah+Latif+Town+Karachi"
+              target="_blank"
+              rel="noopener"
+            >
+              Open Google Maps
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         FINAL CTA
+    ================================= -->
+
+    <section class="final-cta">
+
+      <div class="container">
+
+        <h2>
+          Ready for<br>
+          <span>something good?</span>
+        </h2>
+
+        <p>
+          Contact Usmania Foods directly for the current menu,
+          availability, delivery information or your next order.
+        </p>
+
+        <a
+          class="btn-primary"
+          href="https://wa.me/923182200056?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order"
+          target="_blank"
+          rel="noopener"
+        >
+          Order on WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================================
+       FOOTER
+  ================================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-brand">
+            Usmania Foods
+          </div>
+
+          <p class="footer-description">
+            A local food destination in Shah Latif Town,
+            Karachi. Contact us directly for current menu
+            and ordering information.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="#about">
+            About
+          </a>
+
+          <a href="#menu">
+            Menu
+          </a>
+
+          <a href="#reviews">
+            Reviews
+          </a>
+
+          <a href="#location">
+            Location
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Contact
+          </h4>
+
+          <a
+            href="https://wa.me/923358226801"
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp: 0335-8226801
+          </a>
+
+          <a href="tel:+923182200056">
+            0318-2200056
+          </a>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Usmania+Foods+Sector+16-A+Shah+Latif+Town+Karachi"
+            target="_blank"
+            rel="noopener"
+          >
+            Open Location
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+        © 2026 Usmania Foods. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
 
 </body>
-  </html>
+</html>
